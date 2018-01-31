@@ -5,6 +5,7 @@
 import requests
 import json
 import numpy as np
+import sys
 
 resourceURLs = {
 	"trialSearch": "/v2/search/trials",
