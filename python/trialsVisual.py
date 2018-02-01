@@ -22,7 +22,8 @@ filters = [
 	{'facet':'CONDITION','term':'Lung cancer'},
 	{'facet':'COUNTRY','term':'United States'},
 	{'facet':'COUNTRY','term':'Mexico'},
-	{'facet':'COUNTRY','term':'Canada'}
+	{'facet':'COUNTRY','term':'Canada'},
+	{'facet':'STATUS','term':'Enrolling'}
 ]
 payload = {
 	'apiKey': apiKey,
@@ -33,7 +34,7 @@ r = r.json()
 
 # follow instructions to install basemap:
 # https://stackoverflow.com/questions/42299352/installing-basemap-on-mac-python
-
+# map based on: https://matplotlib.org/basemap/users/mapcoords.html
 from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
 import numpy as np

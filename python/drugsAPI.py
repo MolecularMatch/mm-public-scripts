@@ -36,12 +36,11 @@ r = requests.post(url, data=payload)
 #print(json.dumps(r.json()))
 
 # search drugs by the drug class
-# find chemotherapy drugs for osteosarcoma
+# find chemotherapy drugs
 
 url = mmService + "/v2/search/drugs"
 filters = [
-	{'facet':'DRUGCLASS','term':'Chemotherapy'},
-	{'facet':'CONDITION','term':'Osteosarcoma'},
+	{'facet':'DRUGCLASS','term':'Chemotherapy'}
 ]
 payload = {
 	'apiKey': apiKey,
