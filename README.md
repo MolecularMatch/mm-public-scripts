@@ -6,10 +6,10 @@ Then see more advanced scripting examples here:
 
 [Node.js](javascript)
 
-[Shell](shell)
-
 [Python](python)
 
-[Go](go)
+[Shell](shell)
 
-[R](R) 
+[Go](go) (needs more examples)
+
+[R](R) (needs more examples)
