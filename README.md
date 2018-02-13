@@ -4,9 +4,9 @@ The best way to learn the API is to read and follow the examples on https://api.
 
 Then see more advanced scripting examples here:
 
-[Node.js](javascript)
-
 [Python](python)
+
+[Node.js](javascript)
 
 [Shell](shell)
 
