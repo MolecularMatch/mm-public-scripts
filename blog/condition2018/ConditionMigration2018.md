@@ -61,7 +61,7 @@ Screenshot of internal MM tools for creating composite conditions.
 
 ---------
 
-#### Lets Use It!
+#### Lets Use It! (warning: not available on production yet)
 These codes can now be used in the whole MM ecosystem. From the application search, to API queries, to EHR integration.
 
 ##### App Search
