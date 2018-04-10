@@ -66,10 +66,10 @@ These codes can now be used in the whole MM ecosystem. From the application sear
 
 ##### App Search
 
-http://app.molecularmatch.com/search/ICD10_D45
-http://app.molecularmatch.com/search/SNOMEDID_12345
-http://app.molecularmatch.com/search/DOID_0121
-http://app.molecularmatch.com/search/ONCOTREE_AML
+- http://app.molecularmatch.com/search/ICD10_D45
+- http://app.molecularmatch.com/search/SNOMEDID_12345
+- http://app.molecularmatch.com/search/DOID_0121
+- http://app.molecularmatch.com/search/ONCOTREE_AML
 
 
 ##### API Queries
