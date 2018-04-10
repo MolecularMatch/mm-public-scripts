@@ -107,3 +107,6 @@ No mapping effort is perfect. Work with us to make sure you are getting the resu
 
 ![](images/snomed1.png)
 From: *http://healthstandards.com/blog/2014/04/21/snomed-problems/*
+
+---------
+*published 04/10/2018*
