@@ -110,3 +110,6 @@ From: *http://healthstandards.com/blog/2014/04/21/snomed-problems/*
 
 ---------
 *published 04/10/2018*
+
+TODO: make a version of OHSU G2P disease_normalizer using MM condition search:
+https://github.com/ohsu-comp-bio/g2p-aggregator/blob/cd2ffbecda4f3eeb946761d766929175018bd9fa/harvester/disease_normalizer.py
