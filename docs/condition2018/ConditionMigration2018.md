@@ -73,7 +73,7 @@ These codes can now be used in the whole MM ecosystem. From the application sear
 
 
 ##### API Queries
-See specs on [](api.molecularmatch.com)
+See specs on [api.molecularmatch.com](http://api.molecularmatch.com)
 
 ```
 #################
