@@ -101,7 +101,8 @@ curl 'https://api.molecularmatch.com/v2/search/trials' \
 ```
 #################
 # Condition Search -- used to normalize conditions
-# If you have a condition name, or code, you can search our conditions table to find the best match.
+# If you have a condition name, or code,
+# you can search our conditions table to find the best match.
 # This can then be used as a term in subsequent trials and drugs searches.
 #################
 
