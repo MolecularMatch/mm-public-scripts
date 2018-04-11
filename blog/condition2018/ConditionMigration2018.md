@@ -61,7 +61,8 @@ Screenshot of internal MM tools for creating composite conditions.
 
 ---------
 
-#### Lets Use It! (warning: not available on production yet)
+#### Lets Use It! (<a style="color:red;">warning: not available on production yet</a>)
+
 These codes can now be used in the whole MM ecosystem. From the application search, to API queries, to EHR integration.
 
 ##### App Search
@@ -94,7 +95,23 @@ curl -X POST 'https://api.molecularmatch.com/v2/search/trials' \
 
 curl 'https://api.molecularmatch.com/v2/search/trials' \
 --data "apiKey=$1" \
---data-urlencode 'filters=[ {"facet" : "SNOMEDID", "term" : "03387111"}]'
+--data-urlencode 'filters=[ {"facet" : "SNOMEDID", "term" : "SNOMEDID_254626006"}]'
+```
+
+```
+#################
+# Condition Search -- used to normalize conditions
+# If you have a condition name, or code, you can search our conditions table to find the best match.
+# This can then be used as a term in subsequent trials and drugs searches.
+#################
+
+curl -X POST 'https://api.molecularmatch.com/v2/search/conditions' \
+--data "apiKey=$1" \
+--data-urlencode 'filters=[{"facet":"PHRASE","term":"Lung cancer"}]'
+
+curl 'https://api.molecularmatch.com/v2/search/trials' \
+--data "apiKey=$1" \
+--data-urlencode 'filters=[ {"facet" : "SNOMEDID", "term" : "SNOMEDID_254626006"}]'
 ```
 
 ##### EHR Integration
