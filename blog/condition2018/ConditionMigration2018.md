@@ -18,7 +18,7 @@ MolecularMatch NLP entity extraction and search engines run on ontologies. These
 ---------
 
 #### Condition Data Incorporated into MM
-Condition terms are now searchable by prefix_code (e.g. `SNOMEDID_12345`).
+Condition terms are now searchable by prefix_code (e.g. `SNOMEDID_255035007`).
 
 | Search Prefix | Dataset Name | Records Count |
 |---|---|---|
@@ -44,7 +44,7 @@ Mapping efforts:
 - DOID **→** SNOMED -- MolecularMatch pathologist manually mapped.
 
 Screenshot of internal MM tools curators use to adjust mappings.
-<!-- ![](images/oncotreemapping.png) -->
+
 <img src="images/oncotreemapping.png" style="width: 400px;"/>
 
 
@@ -55,7 +55,7 @@ Screenshot of internal MM tools curators use to adjust mappings.
 Only a handful of genetic composite conditions exist in the public datasets, like "EGFR positive NSCLC". At MM, we've created many more composites, which are necessary in our NLP engine for coalescing meaning from medical documents.
 
 Screenshot of internal MM tools for creating composite conditions.
-<!-- ![](images/composites.png) -->
+
 <img src="images/composites.png" style="width: 400px;"/>
 
 
@@ -68,8 +68,8 @@ These codes can now be used in the whole MM ecosystem. From the application sear
 ##### App Search
 
 - http://app.molecularmatch.com/search/ICD10_D45
-- http://app.molecularmatch.com/search/SNOMEDID_12345
-- http://app.molecularmatch.com/search/DOID_0121
+- http://app.molecularmatch.com/search/SNOMEDID_255035007
+- http://app.molecularmatch.com/search/DOID_3950
 - http://app.molecularmatch.com/search/ONCOTREE_AML
 
 
