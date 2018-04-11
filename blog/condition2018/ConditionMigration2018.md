@@ -29,7 +29,7 @@ Condition terms are now searchable by prefix_code (e.g. `SNOMEDID_12345`).
 
 Additional datasets possibly worth integrating are: **ICD9** and **LOINC**. DiseaseOntology contains cross mapping of terms to MeSH, ICD, NCI’s thesaurus, SNOMED and OMIM.
 
-All datasets can be easily updated on new releases. The current SNOMED-CT version is v20170901 U.S. edition.
+All datasets can be easily updated on new releases. The current SNOMED-CT version is [v20170901 U.S. edition](https://confluence.ihtsdotools.org/display/RMT/SNOMED+CT+Managed+Service+-+US+Edition+Release+Notes+-+September+2017).
 
 ---------
 
@@ -39,7 +39,7 @@ We always design a feedback loop between clinical expertise and software automat
 
 Mapping efforts:
 
-- ICD10 **→** SNOMED -- official mapping file used.
+- ICD10 **→** SNOMED -- official map [file](https://www.nlm.nih.gov/research/umls/mapping_projects/snomedct_to_icd10cm.html) implemented.
 - OncoTree **→** SNOMED -- MolecularMatch pathologist manually mapped.
 - DOID **→** SNOMED -- MolecularMatch pathologist manually mapped.
 
