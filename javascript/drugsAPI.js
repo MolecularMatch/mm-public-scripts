@@ -23,7 +23,8 @@ requestretry({
 		},
 		json: {
 			apiKey: apiKey,
-			filters: JSON.stringify(terms)
+			filters: terms,
+			mode: 'discovery' // defaults to 'criteriaunmet', which performs an assertion guided drug search (see: https://api.molecularmatch.com/#drugs)
 		}
 	},
 	function(error, response, body) {

@@ -27,9 +27,9 @@ filters = [
 ]
 payload = {
 	'apiKey': apiKey,
-	'filters': json.dumps(filters)
+	'filters': filters
 }
-r = requests.post(url, data=payload)
+r = requests.post(url, json=payload)
 r = r.json()
 
 # follow instructions to install basemap:

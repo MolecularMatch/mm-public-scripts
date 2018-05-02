@@ -18,22 +18,24 @@ if apiKey == '<your api key>' and sys.argv[1]:
 url = mmService + "/v2/search/drugs"
 filters = [{'facet':'CONDITION','term':'Lung cancer'}]
 payload = {
+	'mode': 'discovery',
 	'apiKey': apiKey,
-	'filters': json.dumps(filters)
+	'filters': filters
 }
-r = requests.post(url, data=payload)
-#print(json.dumps(r.json()))
+r = requests.post(url, json=payload)
+print(r.json())
 
 # search drugs by the drug name
 
 url = mmService + "/v2/search/drugs"
 filters = [{'facet':'DRUG','term':'nivolumab'}]
 payload = {
+	'mode': 'discovery',
 	'apiKey': apiKey,
-	'filters': json.dumps(filters)
+	'filters': filters
 }
 r = requests.post(url, data=payload)
-#print(json.dumps(r.json()))
+# print(r.json())
 
 # search drugs by the drug class
 # find chemotherapy drugs
@@ -43,8 +45,9 @@ filters = [
 	{'facet':'DRUGCLASS','term':'Chemotherapy'}
 ]
 payload = {
+	'mode': 'discovery',
 	'apiKey': apiKey,
-	'filters': json.dumps(filters)
+	'filters': filters
 }
-r = requests.post(url, data=payload)
-print(json.dumps(r.json()))
+r = requests.post(url, json=payload)
+print(r.json())

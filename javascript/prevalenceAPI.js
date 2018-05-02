@@ -27,7 +27,7 @@ async.series([
 				json: {
 					apiKey: apiKey,
 					type: "AVG", // "MAX"
-					filters: JSON.stringify([{'facet':'MUTATION','term':'BRAF V600E'}])
+					filters: [{'facet':'MUTATION','term':'BRAF V600E'}]
 				}
 			},
 			function(error, response, body) {
@@ -55,7 +55,7 @@ async.series([
 				json: {
 					apiKey: apiKey,
 					type: "AVG", // "MAX"
-					filters: JSON.stringify([{'facet':'MUTATION','term':'BRAF V600E'}, {'facet':'CONDITION','term':'Colorectal cancer'}])
+					filters: [{'facet':'MUTATION','term':'BRAF V600E'}, {'facet':'CONDITION','term':'Colorectal cancer'}]
 				}
 			},
 			function(error, response, body) {
@@ -82,7 +82,7 @@ async.series([
 				},
 				json: {
 					apiKey: apiKey,
-					filters: JSON.stringify([{'facet':'MUTATION','term':'BRAF V600E'}, {'facet':'CONDITION','term':'Colorectal cancer'}])
+					filters: [{'facet':'MUTATION','term':'BRAF V600E'}, {'facet':'CONDITION','term':'Colorectal cancer'}]
 				}
 			},
 			function(error, response, body) {

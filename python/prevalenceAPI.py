@@ -21,9 +21,9 @@ filters = [{'facet':'MUTATION','term':'BRAF V600E'}]
 payload = {
 	'apiKey': apiKey,
 	'type': 'AVG', # 'MAX'
-	'filters': json.dumps(filters)
+	'filters': filters
 }
-r = requests.post(url, data=payload)
+r = requests.post(url, json=payload)
 r = r.json()
 print(''.join(['total aggregate average = ', str(r['aggregation']['frequency']), " (", str(r['aggregation']['count']), '/', str(r['aggregation']['samples']), ")"]))
 
@@ -33,9 +33,9 @@ filters = [{'facet':'MUTATION','term':'BRAF V600E'}, {'facet':'CONDITION','term'
 payload = {
 	'apiKey': apiKey,
 	'type': 'AVG', # 'MAX'
-	'filters': json.dumps(filters)
+	'filters': filters
 }
-r = requests.post(url, data=payload)
+r = requests.post(url, json=payload)
 r = r.json()
 print(''.join(['total colorecal average = ', str(r['aggregation']['frequency']), " (", str(r['aggregation']['count']), '/', str(r['aggregation']['samples']), ")"]))
 
@@ -44,9 +44,9 @@ url = mmService + "/v2/prevalence/search"
 filters = [{'facet':'MUTATION','term':'BRAF V600E'}, {'facet':'CONDITION','term':'Colorectal cancer'}]
 payload = {
 	'apiKey': apiKey,
-	'filters': json.dumps(filters)
+	'filters': filters
 }
-r = requests.post(url, data=payload)
+r = requests.post(url, json=payload)
 for study_record in r.json()['hits']:
 	print(str(study_record['percent']) + ' percent positive in study: ' + study_record['studyId'])
 

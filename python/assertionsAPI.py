@@ -4,6 +4,7 @@
 
 import requests
 import json
+import sys
 
 resourceURLs = {
 	"assertionSearch": "/v2/search/assertions",
@@ -28,7 +29,7 @@ payload = {
 	'apiKey': apiKey,
 	'filters': json.dumps(filters)
 }
-r = requests.post(url, data=payload)
+r = requests.post(url, json=payload)
 #print(json.dumps(r.json()))
 
 #################### export csv ##################################

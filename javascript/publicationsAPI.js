@@ -23,7 +23,7 @@ requestretry({
 		},
 		json: {
 			apiKey: apiKey,
-			filters: JSON.stringify(terms)
+			filters: terms
 		}
 	},
 	function(error, response, body) {

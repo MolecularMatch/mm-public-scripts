@@ -33,9 +33,9 @@ url = mmService + resourceURLs["trialSearch"]
 filters = [{'facet':'CONDITION','term':'Lung cancer'}]
 payload = {
 	'apiKey': apiKey,
-	'filters': json.dumps(filters)
+	'filters': filters
 }
-r = requests.post(url, data=payload)
+r = requests.post(url, json=payload)
 print(json.dumps(r.json()))
 
 ##################################################################
@@ -55,9 +55,9 @@ filters = [
 ]
 payload = {
 	'apiKey': apiKey,
-	'filters': json.dumps(filters)
+	'filters': filters
 }
-r = requests.post(url, data=payload)
+r = requests.post(url, json=payload)
 
 # Question: how many trials for a patient with this mutation and disease are interventional and enrolling in France?
 print(r.json()['total'])
@@ -80,9 +80,9 @@ filters = [
 ]
 payload = {
 	'apiKey': apiKey,
-	'filters': json.dumps(filters)
+	'filters': filters
 }
-r = requests.post(url, data=payload)
+r = requests.post(url, json=payload)
 # Note: must have tags activated on api key for this to work. Not all api key users get tags.
 for tag in r.json()['trials'][0]['tags']:
 	if tag['facet'] == "MUTATION":
@@ -128,7 +128,7 @@ payload = {
 	'variant': 'BRAF V600E',
 	'condition': 'Lung cancer'
 }
-r = requests.post(url, data=payload)
+r = requests.post(url, json=payload)
 
 # Question: How does MolecularMatch classify this mutation in this condition?
 print(r.json()['classifications'][0]['classification'])
@@ -163,9 +163,9 @@ filters = [
 ]
 payload = {
 	'apiKey': apiKey,
-	'filters': json.dumps(filters)
+	'filters': filters
 }
-r = requests.post(url, data=payload)
+r = requests.post(url, json=payload)
 for drug in r.json()['drugs']:
 	if drug['approved'] == False:
 		print(drug['name'])
@@ -186,9 +186,9 @@ url = mmService + resourceURLs["drugSearch"]
 filters = [{'facet':'CONDITION','term':'Lung cancer'}]
 payload = {
 	'apiKey': apiKey,
-	'filters': json.dumps(filters)
+	'filters': filters
 }
-r = requests.post(url, data=payload)
+r = requests.post(url, json=payload)
 print(json.dumps(r.json()))
 
 #####################search trials##################################
@@ -197,9 +197,9 @@ url = mmService + resourceURLs["trialSearch"]
 filters = [{'facet':'CONDITION','term':'Lung cancer'}]
 payload = {
 	'apiKey': apiKey,
-	'filters': json.dumps(filters)
+	'filters': filters
 }
-r = requests.post(url, data=payload)
+r = requests.post(url, json=payload)
 print(json.dumps(r.json()))
 
 #####################search publications#############################
@@ -208,9 +208,9 @@ url = mmService + resourceURLs["publicationSearch"]
 filters = [{'facet':'CONDITION','term':'Lung cancer'}]
 payload = {
 	'apiKey': apiKey,
-	'filters': json.dumps(filters)
+	'filters': filters
 }
-r = requests.post(url, data=payload)
+r = requests.post(url, json=payload)
 print(json.dumps(r.json()))
 
 ####################get mutation###################################
@@ -241,5 +241,5 @@ payload = {
 	'variant': 'EGFR T790M',
 	'condition': 'Lung cancer'
 }
-r = requests.post(url, data=payload)
+r = requests.post(url, json=payload)
 print(json.dumps(r.json()))

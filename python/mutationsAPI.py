@@ -52,9 +52,9 @@ for p in r.json()['parents']:
 	filters = [{'facet':'MUTATION','term':p['name']}]
 	payload = {
 		'apiKey': apiKey,
-		'filters': json.dumps(filters)
+		'filters': filters
 	}
-	r = requests.post(url, data=payload)
+	r = requests.post(url, json=payload)
 	print(str(r.json()['total']) + ' trials found for parent mutation: ' + p['name'])
 
 # Result
@@ -73,7 +73,7 @@ payload = {
 	'variant': 'BRAF V600E',
 	'condition': 'Lung cancer'
 }
-r = requests.post(url, data=payload)
+r = requests.post(url, json=payload)
 
 # Question: How does MolecularMatch classify this mutation in this condition?
 print(r.json()['classifications'][0]['classification'])
