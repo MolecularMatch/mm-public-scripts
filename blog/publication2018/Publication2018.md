@@ -1,10 +1,8 @@
 ## MolecularMatch Publications 2018 Update
 
-Publication search has expanded in importance in recent years at MM due to our in-house curation requirements and necessity to assert all recommendations with literature evidence. Our main goals with our search engines is to allow the user to enter a very wide variety of terms related to a case, and for us to surface the most relevant results in the top 10.
+Publication search has expanded in importance in recent years at MM due to our in-house curation requirements and necessity to assert all recommendations with [literature evidence](https://api.molecularmatch.com/#aboutCompliance). Our main goals with our search engines is to allow the user to enter a very wide variety of terms related to a case, and for us to surface the most relevant results in the top 10.
 
-Evidence grading: https://api.molecularmatch.com/#tieringTemplate
-
-Continually updated, scored and sorted, and cited for you to easily incorporate into your products.
+Publications are continually updated, scored, sorted, and MLA cited for you to easily incorporate into your products.
 
 - [API Publication Search](https://api.molecularmatch.com/#publications)
 - [API Assertions Search](https://api.molecularmatch.com/#assertions)
@@ -26,7 +24,7 @@ Aggregating a large number of publications (450,000!) is only half the battle. T
 
 ### Scoring System Explained
 
-Our Publications, like Trials, Drugs and Assertions, are accessed through our search endpoints, and returned sorted based on a highly advanced scoring system. Through extensive testing with M.D. and Ph.D. oversight, we've settled on a publication search engine that is most likely to have results relevant to your case in the top 10.
+Our Publications, like Trials, Drugs and Assertions, are accessed through our search endpoints, and returned sorted based on a highly advanced scoring system. Through extensive testing with M.D. and Ph.D. oversight, we've settled on a publication search engine that is most likely to have results relevant to your case in the top 10. For clinical uses, this a big improvement over other search engines like Google Scholar and Web of Science.
 
 Scores are made up of a combination of intrinsic and extrinsic values. Intrinsic score comes automatically on the target. The extrinsic is calculated in at search time based on your input.
 
@@ -44,6 +42,7 @@ The extrinsic score of publications is calculated when matching your search crit
 
 Publications get automatically, or manually, assigned a type. This type influences the intrinsic score.
 
+Publication Types (as of April 2018)
 - In patients  **25 points**
 - Clinical Trial  25
 - Expert Reviewed Recommendation Paper  15
@@ -72,7 +71,6 @@ Publications get automatically, or manually, assigned a type. This type influenc
 ---------
 
 Journals automatically imported (as of April 2018):
-
 - Advances in cancer research
 - American Society of Clinical Oncology educational book / ASCO. American Society of Clinical Oncology. Meeting
 - American journal of cancer research
