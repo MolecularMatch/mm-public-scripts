@@ -9,7 +9,7 @@ import sys
 
 mmService = "https://api.molecularmatch.com"
 
-# CHANGE THIS TO YOUR KEY or use as paramter (e.g. $ python3 publicationsAPI.py key)
+# CHANGE THIS TO YOUR KEY or use as parameter (e.g. $ python3 publicationsAPI.py key)
 apiKey = '<your api key>'
 if apiKey == '<your api key>' and sys.argv[1]:
 	apiKey = sys.argv[1]
