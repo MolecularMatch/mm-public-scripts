@@ -64,10 +64,10 @@ print(r.json()['total'])
 # Answer: 4
 
 # Question: what are these trials ClinicalTrials.gov IDs and titles and email addresses for contact?
-for i in np.arange(0, len(r.json()['trials']) ):
-	print(r.json()['trials'][i]['id'])
-	print(r.json()['trials'][i]['briefTitle'])
-	print(r.json()['trials'][i]['overallContact'])
+for i in np.arange(0, len(r.json()['rows']) ):
+	print(r.json()['rows'][i]['id'])
+	print(r.json()['rows'][i]['briefTitle'])
+	print(r.json()['rows'][i]['overallContact'])
 # Answer:
 # NCT02291289 - A Multi-Center Study of Biomarker-Driven Therapy in Metastatic Colorectal Cancer - global.rochegenentechtrials@roche.com
 # NCT01677741 - A Study to Determine Safety, Tolerability and Pharmacokinetics of Oral Dabrafenib In Children and Adolescent Subjects - GSKClinicalSupportHD@gsk.com
@@ -84,7 +84,7 @@ payload = {
 }
 r = requests.post(url, json=payload)
 # Note: must have tags activated on api key for this to work. Not all api key users get tags.
-for tag in r.json()['trials'][0]['tags']:
+for tag in r.json()['rows'][0]['tags']:
 	if tag['facet'] == "MUTATION":
 		print(tag)
 
@@ -163,10 +163,12 @@ filters = [
 ]
 payload = {
 	'apiKey': apiKey,
-	'filters': filters
+	'filters': filters,
+	'mode': 'discovery'
 }
 r = requests.post(url, json=payload)
-for drug in r.json()['drugs']:
+for drug in r.json()['rows']:
+	print(drug)
 	if drug['approved'] == False:
 		print(drug['name'])
 
@@ -186,7 +188,8 @@ url = mmService + resourceURLs["drugSearch"]
 filters = [{'facet':'CONDITION','term':'Lung cancer'}]
 payload = {
 	'apiKey': apiKey,
-	'filters': filters
+	'filters': filters,
+	'mode': 'discovery' # 'criteriaunmet' # multiple modes avaiable for drugsearch. see api docs.
 }
 r = requests.post(url, json=payload)
 print(json.dumps(r.json()))
@@ -201,6 +204,18 @@ payload = {
 }
 r = requests.post(url, json=payload)
 print(json.dumps(r.json()))
+
+# Search trials by various ID types
+filters = [
+	{"facet":"ID","term":"EUDRACT2017-003305-18"}
+]
+payload = {
+	'apiKey': apiKey,
+	'filters': filters
+}
+r = requests.post(url, json=payload)
+print('r here')
+print(r.json())
 
 #####################search publications#############################
 

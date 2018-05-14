@@ -34,7 +34,7 @@ for ep in eps:
 	payload = {
 		'apiKey': apiKey
 	}
-	r = requests.get(url, json=payload)
+	r = requests.get(url, params=payload)
 	r = r.json()
 	print('\n\nENDPOINT: ' + ep)
 	print(r)

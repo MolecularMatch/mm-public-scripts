@@ -1,17 +1,21 @@
-## MolecularMatch Conditions 2018 Update
+<img src="images/letterhead.png" style="width: 900px;"/>
 
-In 2013, MolecularMatch integrated SNOMED-CT as our technology's primary condition (disease) dataset. For months and years after, oncologists and scientists at MM added a layer of curation so that it fits with modern cancer diagnoses. This included editing and adding new conditions and synonyms, and creating genetic composite conditions. Since then, SNOMED has improved in relation to oncology. Also, several open-source disease datasets have been launched. Matching patients to trials, drugs and assertion evidence guidelines depends on an accurate diagnoses and consistent interpretation between healthcare systems. Therefore in 2018, we upgraded our condition system, accomplishing the goals of:
+## Conditions Update for 2018
+
+In 2013, MolecularMatch integrated SNOMED-CT as our technology's primary condition (disease) dataset. For months and years after, oncologists and scientists at MM added a layer of curation so that it fits with modern cancer diagnoses. This included editing and adding new conditions and synonyms, and creating genetic composite conditions. Since then, SNOMED has improved their oncology terms. Also, several open-source disease datasets have been launched; further improving how cancer diagnoses are described and coded.
+
+Matching patients to clinical trials, targeted drugs, and assertion evidence guidelines depends on an accurate diagnoses and consistent interpretation between healthcare systems. Therefore in 2018, we upgraded our condition system, accomplishing the goals of:
 
 1. Allowing cohesive code-based searching to improve EHR/Payer/LIMS integrations.
 2. Updating to the most modern data ontologies.
-3. Expanding operations outside of cancer.
-4. Data validation (duplicates merging) with pathologist oversight.
+3. Expanding our abilities outside-of-cancer.
+4. Data validation and duplicates merging with pathologist oversight.
 
 ---------
 
 MolecularMatch NLP entity extraction and search engines run on ontologies. These include our conditions and findings, our in-house developed [molecular ontology](https://api.molecularmatch.com/#parentLevelMutations) and our global clinical trial aggregation. As our experience with data aggregation has grown, we've developed a protocol that allows for easy integration of big data to enhance our search engines. This high-level protocol is:
 
-1. Acquire datasets in their native form on update intervals.
+1. Acquire datasets in their native form on frequent intervals.
 2. Identification strategy and merging to allow diverse inputs and avoid duplicates.
 3. Incorporate into MMPower for broad use.
 
@@ -129,5 +133,4 @@ From: *http://healthstandards.com/blog/2014/04/21/snomed-problems/*
 ---------
 *published 04/10/2018*
 
-TODO: make a version of OHSU G2P disease_normalizer using MM condition search:
-https://github.com/ohsu-comp-bio/g2p-aggregator/blob/cd2ffbecda4f3eeb946761d766929175018bd9fa/harvester/disease_normalizer.py
+<img src="images/footer.png" style="width: 900px;"/>
