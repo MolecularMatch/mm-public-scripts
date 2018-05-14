@@ -1,6 +1,9 @@
 <img src="images/letterhead.png" style="width: 900px;"/>
 
-## Conditions Update for 2018
+# Conditions Update for 2018
+#### Taking the lead for system interoperability of cancer diagnoses
+
+---------
 
 In 2013, MolecularMatch integrated SNOMED-CT as our technology's primary condition (disease) dataset. For months and years after, oncologists and scientists at MM added a layer of curation so that it fits with modern cancer diagnoses. This included editing and adding new conditions and synonyms, and creating genetic composite conditions. Since then, SNOMED has improved their oncology terms. Also, several open-source disease datasets have been launched; further improving how cancer diagnoses are described and coded.
 
@@ -17,10 +20,11 @@ MolecularMatch NLP entity extraction and search engines run on ontologies. These
 
 1. Acquire datasets in their native form on frequent intervals.
 2. Identification strategy and merging to allow diverse inputs and avoid duplicates.
-3. Incorporate into MMPower for broad use.
+3. Incorporate into our API and other products for broad use.
 
 ---------
 
+<br>
 #### Condition Data Incorporated into MM
 Condition terms are now searchable by prefix_code (e.g. `SNOMEDID_255035007`).
 
@@ -31,9 +35,9 @@ Condition terms are now searchable by prefix_code (e.g. `SNOMEDID_255035007`).
 | DOID | DiseaseOntology -- open source medical vocabulary | **12,498** |
 | ONCOTREE | OncoTree -- curated cancer type ontology by Memorial Sloan Kettering Cancer Center | **627** |
 
-Additional datasets possibly worth integrating are: **ICD9** and **LOINC**. DiseaseOntology contains cross mapping of terms to MeSH, ICD, NCI’s thesaurus, SNOMED and OMIM.
+Additional datasets worth integrating are: **ICD9** and **LOINC**. Through DiseaseOntology, we have cross mapping of terms to MeSH, NCI’s thesaurus and OMIM as well.
 
-All datasets can be easily updated on new releases. The current SNOMED-CT version is [v20170901 U.S. edition](https://confluence.ihtsdotools.org/display/RMT/SNOMED+CT+Managed+Service+-+US+Edition+Release+Notes+-+September+2017).
+All datasets are easily updated on new releases. The current SNOMED-CT version is [v20170901 U.S. edition](https://confluence.ihtsdotools.org/display/RMT/SNOMED+CT+Managed+Service+-+US+Edition+Release+Notes+-+September+2017).
 
 ---------
 
@@ -43,13 +47,13 @@ We always design a feedback loop between clinical expertise and software automat
 
 Mapping efforts:
 
-- ICD10 **→** SNOMED -- official map [file](https://www.nlm.nih.gov/research/umls/mapping_projects/snomedct_to_icd10cm.html) implemented.
+- ICD10 **→** SNOMED -- official map [file](https://www.nlm.nih.gov/research/umls/mapping_projects/snomedct_to_icd10cm.html) implemented w/ manual adjustment capability.
 - OncoTree **→** SNOMED -- MolecularMatch pathologist manually mapped.
 - DOID **→** SNOMED -- MolecularMatch pathologist manually mapped.
 
 Screenshot of internal MM tools curators use to adjust mappings.
 
-<img src="images/oncotreemapping.png" style="width: 400px;"/>
+<img src="images/oncotreemapping.png" style="width: 450px;"/>
 
 
 ---------
@@ -60,7 +64,7 @@ Only a handful of genetic composite conditions exist in the public datasets, lik
 
 Screenshot of internal MM tools for creating composite conditions.
 
-<img src="images/composites.png" style="width: 400px;"/>
+<img src="images/composites.png" style="width: 450px;"/>
 
 
 ---------
@@ -131,6 +135,6 @@ No mapping effort is perfect. Work with us to make sure you are getting the resu
 From: *http://healthstandards.com/blog/2014/04/21/snomed-problems/*
 
 ---------
-*published 04/10/2018*
+*published 05/20/2018*
 
 <img src="images/footer.png" style="width: 900px;"/>
