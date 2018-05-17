@@ -25,7 +25,9 @@ MolecularMatch NLP entity extraction and search engines run on ontologies. These
 ---------
 
 <br>
+
 #### Condition Data Incorporated into MM
+
 Condition terms are now searchable by prefix_code (e.g. `SNOMEDID_255035007`).
 
 | Search Prefix | Dataset Name | Records Count |
