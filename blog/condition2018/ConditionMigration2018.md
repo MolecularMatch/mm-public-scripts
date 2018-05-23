@@ -49,7 +49,7 @@ We always design a feedback loop between clinical expertise and software automat
 
 Mapping efforts:
 
-- ICD10 **→** SNOMED -- official map [file](https://www.nlm.nih.gov/research/umls/mapping_projects/snomedct_to_icd10cm.html) implemented w/ manual adjustment capability.
+- ICD10 **→** SNOMED -- official map [file](https://www.nlm.nih.gov/research/umls/mapping_projects/snomedct_to_icd10cm.html) implemented w/ manual adjustment.
 - OncoTree **→** SNOMED -- MolecularMatch pathologist manually mapped.
 - DOID **→** SNOMED -- MolecularMatch pathologist manually mapped.
 
@@ -77,9 +77,13 @@ These codes can now be used in the whole MM ecosystem. From the application sear
 
 ##### App Search
 
+- `ICD10_D45` = `Polycythemia vera`
 - http://app.molecularmatch.com/search/ICD10_D45
+- `SNOMEDID_255035007` = `Adrenal carcinoma`
 - http://app.molecularmatch.com/search/SNOMEDID_255035007
+- `DOID_3950` = `Adrenal carcinoma`
 - http://app.molecularmatch.com/search/DOID_3950
+- `ONCOTREE_AML` = `Acute myeloid leukemia, disease`
 - http://app.molecularmatch.com/search/ONCOTREE_AML
 
 
@@ -135,8 +139,5 @@ No mapping effort is perfect. Work with us to make sure you are getting the resu
 
 ![](images/snomed1.png)
 From: *http://healthstandards.com/blog/2014/04/21/snomed-problems/*
-
----------
-*published 05/20/2018*
 
 <img src="images/footer.png" style="width: 900px;"/>
