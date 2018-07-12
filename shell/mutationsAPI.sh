@@ -31,3 +31,7 @@ curl -G "https://api.molecularmatch.com/v2/mutation/get" \
 -H "Authorization: Bearer $1" \
 --data-urlencode "gene=BRAF" \
 --data-urlencode "cdot=c.1799T>A"
+
+curl -G "https://api.molecularmatch.com/v2/gene/get" \
+-H "Authorization: Bearer $1" \
+--data-urlencode "symbol=BRAF"
