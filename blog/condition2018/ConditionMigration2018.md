@@ -11,8 +11,7 @@ Matching patients to clinical trials, targeted drugs, and assertion evidence gui
 
 1. Allowing cohesive code-based searching to improve EHR/Payer/LIMS integrations.
 2. Updating to the most modern data ontologies.
-3. Expanding our abilities outside-of-cancer.
-4. Data validation and duplicates merging with pathologist oversight.
+3. Data validation and duplicates merging with pathologist oversight.
 
 ---------
 
@@ -24,7 +23,7 @@ MolecularMatch NLP entity extraction and search engines run on ontologies. These
 
 ---------
 
-<br>
+<br><br>
 
 #### Condition Data Incorporated into MM
 
@@ -45,7 +44,7 @@ All datasets are easily updated on new releases. The current SNOMED-CT version i
 
 #### Dataset Mapping
 
-We always design a feedback loop between clinical expertise and software automation. We do this by building easy to use, internal data management tools for training from M.D. and Ph.D. curators. This condition data upgrade required more than **100** M.D. pathologist curation hours.
+We always design a feedback loop between clinical expertise and software automation. We do this by building easy to use, internal data management tools for training from M.D. and Ph.D. curators. This condition data upgrade required more than **300** M.D. pathologist curation hours.
 
 Mapping efforts:
 
@@ -55,7 +54,7 @@ Mapping efforts:
 
 Screenshot of internal MM tools curators use to adjust mappings.
 
-<img src="images/oncotreemapping.png" style="width: 450px;"/>
+<img src="images/oncotreemapping.png" style="width: 420px;"/>
 
 
 ---------
@@ -66,7 +65,7 @@ Only a handful of genetic composite conditions exist in the public datasets, lik
 
 Screenshot of internal MM tools for creating composite conditions.
 
-<img src="images/composites.png" style="width: 450px;"/>
+<img src="images/composites2.png" style="width: 420px;"/>
 
 
 ---------
@@ -110,9 +109,7 @@ curl -X POST 'https://api.molecularmatch.com/v2/search/trials' \
 curl 'https://api.molecularmatch.com/v2/search/trials' \
 --data "apiKey=$1" \
 --data-urlencode 'filters=[ {"facet" : "SNOMEDID", "term" : "SNOMEDID_254626006"}]'
-```
 
-```
 #################
 # Condition Search -- used to normalize conditions
 # If you have a condition name, or code,
