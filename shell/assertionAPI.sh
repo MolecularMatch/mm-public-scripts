@@ -12,16 +12,16 @@
 #################
 
 # format=csv
-curl "https://api.molecularmatch.com/v2/export/assertions?apiKey=$1" --data 'condition=Neoplasm of lung' --data 'format=csv' -o data.csv
+curl "https://api.molecularmatch.com/v2/export/assertions?apiKey=$1" --data 'condition=Malignant tumor of lung' --data 'format=csv' -o data1.csv
 
-curl "https://api.molecularmatch.com/v2/export/assertions?apiKey=$1" --data 'condition=Neoplasm of breast' --data 'format=csv' -o data.csv
+curl "https://api.molecularmatch.com/v2/export/assertions?apiKey=$1" --data 'condition=Malignant tumor of breast' --data 'format=csv' -o data2.csv
 
-curl "https://api.molecularmatch.com/v2/export/assertions?apiKey=$1" --data 'condition=Neoplasm of colorectum' --data 'format=csv' -o data.csv
+curl "https://api.molecularmatch.com/v2/export/assertions?apiKey=$1" --data 'condition=Malignant tumor of colon' --data 'format=csv' -o data3.csv
 
 # format=json
-curl "https://api.molecularmatch.com/v2/export/assertions?apiKey=$1" --data 'condition=Neoplasm of breast' --data 'format=json' -o data.json
+curl "https://api.molecularmatch.com/v2/export/assertions?apiKey=$1" --data 'condition=Malignant tumor of breast' --data 'format=json' -o data4.json
 
-curl "https://api.molecularmatch.com/v2/export/assertions?apiKey=$1" --data 'condition=Neoplasm of colorectum' --data 'format=json' -o data.json
+curl "https://api.molecularmatch.com/v2/export/assertions?apiKey=$1" --data 'condition=Malignant tumor of colon' --data 'format=json' -o data5.json
 
 #################
 # Search, return all assertions that have to do with BRAF V600E
