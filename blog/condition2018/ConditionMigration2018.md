@@ -78,9 +78,9 @@ These codes can now be used in the whole MM ecosystem. From the application sear
 
 - `ICD10_D45` = `Polycythemia vera`
 - http://app.molecularmatch.com/search/ICD10_D45
-- `SNOMEDID_255035007` = `Adrenal carcinoma`
+- `SNOMEDID_363478007` = `Thyroid cancer`
 - http://app.molecularmatch.com/search/SNOMEDID_255035007
-- `DOID_3950` = `Adrenal carcinoma`
+- `DOID_1781` = `Thyroid cancer`
 - http://app.molecularmatch.com/search/DOID_3950
 - `ONCOTREE_AML` = `Acute myeloid leukemia, disease`
 - http://app.molecularmatch.com/search/ONCOTREE_AML
