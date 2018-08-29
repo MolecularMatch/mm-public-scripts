@@ -29,8 +29,6 @@ var terms = [{
   }
 ]
 
-console.log(terms)
-
 // Example of how to get all trials 10 at a time because there is a page limit of 10
 var page = 1
 var limit = 10
