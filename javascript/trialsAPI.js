@@ -14,10 +14,10 @@ if (process.argv[2]) apiKey = process.argv[2]
 
 var terms = [{
   'facet': 'CONDITION',
-  'term': 'Lung cancer'
+  'term': 'NSCLC'
 }, {
-  'facet': 'MUTATION',
-  'term': 'KRAS G12C'
+  'facet': 'RESISTANCE',
+  'term': 'osimertinib resistance'
 },
   {
     'facet': 'STATUS',
@@ -36,6 +36,7 @@ var page = 1
 var limit = 10
 var start = 0
 var totalPages
+var totalTrials = []
 // async while loop: while our current page is less than or equal to total pages, keep making requests
 async.whilst(
   function () {
@@ -62,10 +63,10 @@ async.whilst(
     }, function (error, response, body) {
       if (error) throw error
       if (response.statusCode == '200') {
-        // console.log(JSON.stringify(body))
-        var ids = []
-        for (var i of body.rows) ids.push(i.id)
-        console.log(ids)
+        if (page == 1) console.log('rationalized filters: ' + JSON.stringify(body.rationalized))
+        for (var i of body.rows) {
+          totalTrials.push(i.id + '\t--\t' + i.briefTitle)
+        }
       } else {
         console.log(response)
         console.log('statusCode: ' + response.statusCode)
@@ -77,6 +78,8 @@ async.whilst(
     })
   },
   function (err) {
+    console.log('RESULT\n\n')
+    for (k of totalTrials) console.log(k)
     process.exit()
   }
 )
