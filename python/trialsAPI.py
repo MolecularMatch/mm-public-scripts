@@ -38,6 +38,38 @@ payload = {
 r = requests.post(url, json=payload)
 print(json.dumps(r.json()))
 
+#####################search w/ paging##################################
+
+# Example of how to get all pubs 10 at a time because there is a page limit of 10
+page = 1
+limit = 10
+start = 0
+url = mmService + resourceURLs["trialSearch"]
+filters = [{'facet':'CONDITION','term':'Lung cancer'}, {'facet':'GENE','term':'BRAF'}]
+payload = {
+	'apiKey': apiKey,
+	'filters': filters,
+	'start': start,
+	'limit': limit
+}
+# perform first request to get total
+r = requests.post(url, json=payload)
+total = r.json()['total']
+
+# now go through them all 10 at a time
+myrange = range(0, total, limit)
+for count in myrange:
+	payload['start'] = count
+	r = requests.post(url, json=payload)
+	for trial in r.json()['rows']:
+		print(trial['link'])
+
+# Output
+# http://clinicaltrials.gov/ct2/show/NCT03533127
+# http://clinicaltrials.gov/ct2/show/NCT03456063
+# http://clinicaltrials.gov/ct2/show/NCT03428022
+# ...
+
 ##################################################################
 #####################SCENARIOS####################################
 ##################################################################
