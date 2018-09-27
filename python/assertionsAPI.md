@@ -1,7 +1,7 @@
 ## Assertions API Detailed Docs
 Based on documentation available at [api.molecularmatch.com](http://api.molecularmatch.com/#assertions).
 
-For background on assertions, see diagrams and publications about [on this page](https://github.com/MolecularMatch/mm-public-scripts/blob/master/blog/assertions/).
+For background on assertions, see diagrams and publications [on this page](https://github.com/MolecularMatch/mm-public-scripts/blob/master/blog/assertions/).
 
 ### Assertion Search
 
