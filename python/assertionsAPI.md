@@ -1,9 +1,9 @@
 ## Assertions API Detailed Docs
-Based on documentation available at [api.molecularmatch.com](http://api.molecularmatch.com/#searchAssertions)
+Based on documentation available at [api.molecularmatch.com](http://api.molecularmatch.com/#assertions)
 
 ### Assertion Search
 
-Image from the web application. The app is good for discovery purposes or physician use.
+Image from the [web application](http://assertions.molecularmatch.com). The app is good for discovery purposes or physician use.
 >![](pics/clinsig2.png)
 
 #### Let's break down a typical search scenario
