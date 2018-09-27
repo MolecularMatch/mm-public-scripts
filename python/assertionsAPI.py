@@ -1,61 +1,90 @@
 # MolecularMatch API (MM-DATA) Python Example Sheet
 # Based on documentation at https://api.molecularmatch.com
-# Author: Shane Neeley, MolecularMatch Inc., Jan. 30, 2018
+# Author: Shane Neeley, MolecularMatch Inc., Sep. 26, 2018
 
 import requests
 import json
 import sys
 
-resourceURLs = {
-	"assertionSearch": "/v2/search/assertions",
-	"assertionExport": "/v2/export/assertions",
-}
-mmService = "https://api.molecularmatch.com"
+url = 'https://api.molecularmatch.com/v2/assertion/search'
 
 # CHANGE THIS TO YOUR KEY or use as parameter (e.g. $ python3 publicationsAPI.py key)
 apiKey = '<your api key>'
 if apiKey == '<your api key>' and sys.argv[1]:
 	apiKey = sys.argv[1]
 
-# Note, conditions have to be added to your key before this will work. Customers pay per condition.
-
 #################### search ##################################
 
-url = mmService + resourceURLs["assertionSearch"]
-filters = [{'facet':'CONDITION','term':'Lung cancer'}]
-#filters = [{'facet':'CONDITION','term':'Breast cancer'}]
-#filters = [{'facet':'CONDITION','term':'Colorectal cancer'}]
+# Scenario: Looking for treatments with `supporting` evidence
+# where the `biomarker` provided is `predictive` of drug `sensitivity`.
+
+filters = [
+	{
+		"facet":"ASSERTION-DIRECTION",
+		"term":"supports" # can be: Supports, Does Not Support
+	},
+	{
+		"facet":"BIOMARKER_CLASS",
+		"term":"predictive" # can be: Predictive/Theranostic, Diagnostic, Prognostic, Unknown
+	},
+	{
+		"facet":"CLINICAL_SIGNIFICANCE",
+		"term":"sensitive" # can be: Resistant, No Response, Sensitive, Favorable, Unfavorable, Unknown
+	},
+	{
+		"facet":"MUTATION",
+		"term":"BRAF V600E"
+	},
+	{
+		"facet":"CONDITION",
+		"term":"Lung cancer"
+	}
+]
+
 payload = {
 	'apiKey': apiKey,
-	'filters': json.dumps(filters)
+	'filters': json.dumps(filters),
+	'tieringTemplate': 'AMPCAP', # or MVLD
+	'mode': 'strict' # or criteriaunmet
 }
 r = requests.post(url, json=payload)
-#print(json.dumps(r.json()))
+print(json.dumps(r.json()))
 
-#################### export csv ##################################
+#################### simple search w/ paging ###########################
 
-url = mmService + resourceURLs["assertionExport"]
+# Scenario: just show me all AML assertions
+# For more than 10 results, you must perform a query for each page of results.
+
+filters = [{'facet':'CONDITION','term':"Acute myeloid leukemia"}]
 payload = {
 	'apiKey': apiKey,
-	'format': 'csv',
-	'condition': 'Neoplasm of lung',
-	#'condition': 'Neoplasm of breast',
-	#'condition': 'Neoplasm of colorectum',
+	'filters': filters,
+	'start': 0,
+	'limit': 10, # max limit = 10 records
+	'mode': 'strict',
+	'tieringTemplate': 'AMPCAP'
 }
-r = requests.post(url, data=payload)
-with open('data.csv', 'w') as f:
-    f.write(r.text)
+# perform first request to get total
+r = requests.post(url, json=payload)
+total = r.json()['total'] * r.json()['totalPages'] # TODO: bug - 'total' should have total of all rows
 
-#################### export json ##################################
+# now go through them all 10 at a time
+myrange = range(0, total, payload['limit'])
+for count in myrange:
+	payload['start'] = count
+	r = requests.post(url, json=payload)
+	for assertion in r.json()['rows']:
+		print(assertion['narrative'])
 
-url = mmService + resourceURLs["assertionExport"]
-payload = {
-	'apiKey': apiKey,
-	'format': 'json',
-	'condition': 'Neoplasm of lung',
-	#'condition': 'Neoplasm of breast',
-	#'condition': 'Neoplasm of colorectum',
-}
-r = requests.post(url, data=payload)
-with open('data.json', 'w') as f:
-	f.write(r.text)
+# Result:
+# IDH1 R132G confers sensitivity to Ag-120 in patients with Acute myeloid leukemia
+# IDH1 R132S confers sensitivity to Ag-120 in patients with Acute myeloid leukemia
+# NPM1 W288Lfs*12 is Prognostic in patients with Acute myeloid leukemia
+# FLT3 D593_F594insSPEDNEYFYVD confers sensitivity to Quizartinib in patients with Acute myeloid leukemia
+# ...
+
+##############################################################
+
+
+
+##############################################################
