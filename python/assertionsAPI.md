@@ -30,6 +30,8 @@ r = requests.post(url, json=payload)
 print(json.dumps(r.json()))
 ```
 
+For going through multiple pages of assertions, see the [paging example](https://github.com/MolecularMatch/mm-public-scripts/blob/master/python/assertionsAPI.py).
+
 Valid Values:
 
 - BIOMARKER_CLASS --- `Predictive/Theranostic`, `Diagnostic`, `Prognostic`, `Unknown`
