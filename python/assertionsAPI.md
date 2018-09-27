@@ -61,3 +61,6 @@ Other tiering system's scores have also been calculated.
 
 The criteria your search did not match. This assertion was for NSCLC, but you entered it's parent Lung cancer (root term = Malignant tumor of lung).
 >>> ![](pics/p4_criteria.png)
+
+Back at the high-level response, you see explanations of the tiering and the root terms your query rationalized to.
+>>> ![](pics/p7.png)
