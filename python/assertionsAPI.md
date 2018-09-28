@@ -51,7 +51,8 @@ Here is the breakdown of the response, starting from the high-level, and digging
 High-level response.
 >>> ![](pics/p1.png)
 
-An overview of the record's fields
+An overview of the record's fields. Some things to note:
+- regulatoryBody in this case is the U.S. FDA, and regulatoryBodyApproved equals true for the drug in question. This is the data that leads to a red X or green check you see on the assertion response image from the app.
 >>> ![](pics/p2_rec.png)
 
 This is the data (trials, publications, abstracts) that support the conclusion of the assertion.
