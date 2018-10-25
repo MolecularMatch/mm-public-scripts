@@ -98,3 +98,84 @@ print(r.json()['classifications'][0]['trialCount'])
 # Question: Is there a lot of research publications about this mutation in this condition?
 print(r.json()['classifications'][0]['publicationCount'])
 # Answer: 47
+
+
+############################################
+#### Mutation details lookup
+
+# So you want to know everything there is to know about BRAF V600E?
+
+url = mmService + resourceURLs["mutationGet"]
+payload = {
+	'apiKey': apiKey,
+	'name': 'BRAF V600E'
+}
+r = requests.get(url, params=payload)
+
+# Question: what databases have reported this mutation?
+print(r.json()['sources'])
+# Answer: 'COSMIC', 'CIViC', 'DoCM', 'cBioPortal', 'ClinVar'
+
+# Question: is there a known protein domain this mutation is in?
+for i in r.json()['parents']:
+	if (i['type'] == 'domain'):
+		print(i)
+# Answer: BRAF Pkinase_Tyr domain (protein tyrosine kinase domain)
+
+# What is the clinical interpretation of BRAF V600E? Are there trials, drugs, publications about it?
+
+url = mmService + resourceURLs["mutationClassify"]
+payload = {
+	'apiKey': apiKey,
+	'variant': 'BRAF V600E',
+	'condition': 'Lung cancer'
+}
+r = requests.post(url, json=payload)
+
+# Question: How does MolecularMatch classify this mutation in this condition?
+print(r.json()['classifications'][0]['classification'])
+# Answer: actionable
+
+# Question: How many drugs approved and on label for the condition provided?
+print(r.json()['classifications'][0]['drugsApprovedOnLabelCount'])
+# Answer: 0
+
+# Question: How many drugs approved but off-label for the condition provided?
+print(r.json()['classifications'][0]['drugsApprovedOffLabelCount'])
+# Answer: 6
+
+# Question: What about experimental drugs?
+print(r.json()['classifications'][0]['drugsExperimentalCount'])
+# Answer: 4
+
+# Question: How many clinical trials are open for this mutation and condition?
+print(r.json()['classifications'][0]['trialCount'])
+# Answer: 24
+
+# Question: Is there a lot of research publications about this mutation in this condition?
+print(r.json()['classifications'][0]['publicationCount'])
+# Answer: 47
+
+# Question: Ok, what are these 4 experimental drugs?
+url = mmService + resourceURLs["drugSearch"]
+# set geneExpand for Drug to False so drugs return only for V600E, not BRAF (see https://api.molecularmatch.com/#geneExpansion)
+filters = [
+	{'facet':'CONDITION','term':'Lung cancer'},
+	{'facet':'MUTATION','term':'BRAF V600E', "geneExpand": {"Drug": False}}
+]
+payload = {
+	'apiKey': apiKey,
+	'filters': filters,
+	'mode': 'discovery'
+}
+r = requests.post(url, json=payload)
+for drug in r.json()['rows']:
+	print(drug)
+	if drug['approved'] == False:
+		print(drug['name'])
+
+# Answer:
+# Lgx818
+# Plx8394
+# BGB-283
+# Cep-32496

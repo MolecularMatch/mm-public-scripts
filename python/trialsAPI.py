@@ -131,162 +131,43 @@ for tag in r.json()['rows'][0]['tags']:
 
 # See more about the trial data model at: https://api.molecularmatch.com/#trialDataModel
 
-#### Mutation details lookup
+#####################search w/ medicalgroups##################################
 
-# So you want to know everything there is to know about BRAF V600E?
+# MEDICALGROUP filter will find trials by a sponsor or location
+# LOCATIONMEDICALGROUP filter will find trials by location (trial site) only, and can be combined
+# w/ "CITY", "STATE", "COUNTRY", "LOCATIONSTATUS", "DISTANCE" to make a nested search on the locations
+# see https://api.molecularmatch.com/#domainLocationMedicalGroup
 
-url = mmService + resourceURLs["mutationGet"]
-payload = {
-	'apiKey': apiKey,
-	'name': 'BRAF V600E'
-}
-r = requests.get(url, params=payload)
-
-# Question: what databases have reported this mutation?
-print(r.json()['sources'])
-# Answer: 'COSMIC', 'CIViC', 'DoCM', 'cBioPortal', 'ClinVar'
-
-# Question: is there a known protein domain this mutation is in?
-for i in r.json()['parents']:
-	if (i['type'] == 'domain'):
-		print(i)
-# Answer: BRAF Pkinase_Tyr domain (protein tyrosine kinase domain)
-
-# What is the clinical interpretation of BRAF V600E? Are there trials, drugs, publications about it?
-
-url = mmService + resourceURLs["mutationClassify"]
-payload = {
-	'apiKey': apiKey,
-	'variant': 'BRAF V600E',
-	'condition': 'Lung cancer'
-}
-r = requests.post(url, json=payload)
-
-# Question: How does MolecularMatch classify this mutation in this condition?
-print(r.json()['classifications'][0]['classification'])
-# Answer: actionable
-
-# Question: How many drugs approved and on label for the condition provided?
-print(r.json()['classifications'][0]['drugsApprovedOnLabelCount'])
-# Answer: 0
-
-# Question: How many drugs approved but off-label for the condition provided?
-print(r.json()['classifications'][0]['drugsApprovedOffLabelCount'])
-# Answer: 6
-
-# Question: What about experimental drugs?
-print(r.json()['classifications'][0]['drugsExperimentalCount'])
-# Answer: 4
-
-# Question: How many clinical trials are open for this mutation and condition?
-print(r.json()['classifications'][0]['trialCount'])
-# Answer: 24
-
-# Question: Is there a lot of research publications about this mutation in this condition?
-print(r.json()['classifications'][0]['publicationCount'])
-# Answer: 47
-
-# Question: Ok, what are these 4 experimental drugs?
-url = mmService + resourceURLs["drugSearch"]
-# set geneExpand for Drug to False so drugs return only for V600E, not BRAF (see https://api.molecularmatch.com/#geneExpansion)
-filters = [
-	{'facet':'CONDITION','term':'Lung cancer'},
-	{'facet':'MUTATION','term':'BRAF V600E', "geneExpand": {"Drug": False}}
+MGs = [
+	"Washington University",
+	"Pfizer",
+	"Universitätsspital Basel"
 ]
-payload = {
-	'apiKey': apiKey,
-	'filters': filters,
-	'mode': 'discovery'
-}
-r = requests.post(url, json=payload)
-for drug in r.json()['rows']:
-	print(drug)
-	if drug['approved'] == False:
-		print(drug['name'])
+for id in MGs:
+    # a regular search
+	# regular medicalgroup + trial status search (doesn't guarantee locations for medicalgroup are enrolling)
+	# e.g., may be sponsored my M.D. Anderson, but trial takes place at a non-affiliated clinic
+    filters = [
+        {'facet': 'MEDICALGROUP', 'term': id},
+        {'facet': 'STATUS', 'term': 'Enrolling'},
+    ]
+    payload = {
+        'apiKey': apiKey, 'filters': filters
+    }
+    r = requests.post(url, json=payload).json()
+    totalregular = str(r['total'])
 
-# Answer:
-# Lgx818
-# Plx8394
-# BGB-283
-# Cep-32496
+    # now try nested
+	# nested medicalgroup on location, and status on location search (guarantees locations for medicalgroup are enrolling)
+	# e.g. trial site is located at an MD Anderson facility, and this site is marked as enrolling
+    filters = [
+        {'facet': 'LOCATIONMEDICALGROUP', 'term': id},
+        {'facet': 'LOCATIONSTATUS', 'term': 'Enrolling'},
+    ]
+    payload = {
+        'apiKey': apiKey, 'filters': filters
+    }
+    r = requests.post(url, json=payload).json()
+    totalnested = str(r['total'])
 
-##################################################################
-#####################BASIC QUERIES################################
-##################################################################
-
-####################search drugs##################################
-
-url = mmService + resourceURLs["drugSearch"]
-filters = [{'facet':'CONDITION','term':'Lung cancer'}]
-payload = {
-	'apiKey': apiKey,
-	'filters': filters,
-	'mode': 'discovery' # 'criteriaunmet' # multiple modes avaiable for drugsearch. see api docs.
-}
-r = requests.post(url, json=payload)
-print(json.dumps(r.json()))
-
-#####################search trials##################################
-
-url = mmService + resourceURLs["trialSearch"]
-filters = [{'facet':'CONDITION','term':'Lung cancer'}]
-payload = {
-	'apiKey': apiKey,
-	'filters': filters
-}
-r = requests.post(url, json=payload)
-print(json.dumps(r.json()))
-
-# Search trials by various ID types
-filters = [
-	{"facet":"ID","term":"EUDRACT2017-003305-18"}
-]
-payload = {
-	'apiKey': apiKey,
-	'filters': filters
-}
-r = requests.post(url, json=payload)
-print('r here')
-print(r.json())
-
-#####################search publications#############################
-
-url = mmService + resourceURLs["publicationSearch"]
-filters = [{'facet':'CONDITION','term':'Lung cancer'}]
-payload = {
-	'apiKey': apiKey,
-	'filters': filters
-}
-r = requests.post(url, json=payload)
-print(json.dumps(r.json()))
-
-####################get mutation###################################
-
-url = mmService + resourceURLs["mutationGet"]
-payload = {
-	'apiKey': apiKey,
-	'name': 'BRAF V600E'
-}
-r = requests.get(url, params=payload)
-print(json.dumps(r.json()))
-
-######################get gene#################################
-
-url = mmService + resourceURLs["geneGet"]
-payload = {
-	'apiKey': apiKey,
-	'symbol': 'BRAF'
-}
-r = requests.get(url, params=payload)
-print(json.dumps(r.json()))
-
-######################classify mutation##############################
-
-url = mmService + resourceURLs["mutationClassify"]
-payload = {
-	'apiKey': apiKey,
-	'variant': 'EGFR T790M',
-	'condition': 'Lung cancer'
-}
-r = requests.post(url, json=payload)
-print(json.dumps(r.json()))
+    print('\t'.join([id, totalregular, totalnested]))
