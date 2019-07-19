@@ -41,7 +41,7 @@ The intrinsic score on a publication has several factors:
 
 The extrinsic score of publications is calculated when matching your search criteria to information on the abstract. For example, terms matched in the title are given more score than terms found lower in the abstract, like in the methods.
 
-##### Publication Types and Trial Types for score adjustments
+#### Publication Types and Trial Types for score adjustments
 
 Publications get automatically, or manually, assigned types. Types influences the intrinsic score.
 
@@ -51,7 +51,7 @@ Publication ranking has been validated through hundreds of test suites. Test sui
 
 ---------
 
-##### Journals
+### Journals
 
 We will acquire any publication from any journal if it is relevant to cancer conditions and mutations that we index. Though some journals are automatically imported on a weekly basis because.
 
