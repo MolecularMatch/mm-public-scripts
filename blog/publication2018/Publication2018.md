@@ -53,7 +53,7 @@ Publication ranking has been validated through hundreds of test suites. Test sui
 
 ### Journals
 
-We will acquire any publication from any journal if it is relevant to cancer conditions and mutations that we index. Though some journals are automatically imported on a weekly basis because.
+We will acquire any publication from any journal if it is relevant to cancer conditions and mutations that we index. Though some journals are automatically imported.
 
 Journals automatically imported (as of July 2019):
 
