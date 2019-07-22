@@ -11,18 +11,17 @@ Publications are continually updated, scored, sorted, and MLA cited for you to e
 
 MolecularMatch indexes publications in several ways:
 
-1. Weekly acquisition from PubMed from our cancer-related journals list
-2. Mutation based acquisition from PubMed for journals outside of our list
-3. Conference Meeting Abstracts (ASCO, AACR, ESMO)
-4. NCCN Guideline cited publications
-5. In-house medical curator findings
-6. Additions of publications by our network of users
+1. Weekly acquisition of new publications from PubMed
+2. Conference Meeting Abstracts (ASCO, AACR, ESMO)
+3. NCCN Guideline cited publications
+4. In-house medical curator findings
+5. Additions of publications by our network of users
 
 ---------
 
 ### Scoring System Explained
 
-Publications, like our Trials, Drugs and Assertions, are accessed through our API endpoints. They are returned sorted based on a highly advanced scoring system. Through extensive testing with M.D. and Ph.D. oversight, we've settled on a publication search engine that is most likely to have results relevant to your case. For ease of use, this a big improvement over other search engines like Google Scholar, Web of Science and PubMed.
+Publications, like our Trials, Drugs and Assertions, are accessed through our API endpoints. They are returned sorted based on a highly advanced scoring system. Through extensive testing with M.D. and Ph.D. oversight, we've developed a publication search engine that is most likely to have results relevant to your case.
 
 Scores are made up of a combination of *intrinsic* and *extrinsic* values.
 
