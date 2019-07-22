@@ -1,3 +1,5 @@
+<img src="images/letterhead.png" style="width: 900px;"/>
+
 ## MolecularMatch Publications 2019 Update
 
 Publication search has expanded in importance in recent years at MM due to our in-house curation requirements and necessity to assert all recommendations with [literature evidence](https://api.molecularmatch.com/#aboutCompliance). With our search engine expertise, we have created the most clinically relevant and user friendly publication search in the industry. Our goal is that the most relevant results show up in the top 10 for any clinical oncology search.
@@ -47,3 +49,5 @@ Publication ranking has been validated through hundreds of test suites. Test sui
 If users find any publications we are missing from our index, they can submit them by PubMed ID to our support email. They will then be acquired, tagged and served back through the API.
 
 ---------
+
+<img src="images/footer.png" style="width: 900px;"/>
