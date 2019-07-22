@@ -18,8 +18,6 @@ MolecularMatch indexes publications in several ways:
 5. In-house medical curator findings
 6. Additions of publications by our network of users
 
-Aggregating a large number of publications (900,000!) is only half the battle. To ensure relevancy to patient cases, a great deal of further technology automation and human curation is required.
-
 ---------
 
 ### Scoring System Explained
