@@ -50,4 +50,9 @@ If users find any publications we are missing from our index, they can submit th
 
 ---------
 
+<br>
+<br>
+<br>
+<br>
+<br>
 <img src="images/footer.png" style="width: 900px;"/>
