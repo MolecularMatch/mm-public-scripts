@@ -6,8 +6,6 @@ Publications are continually updated, scored, sorted, and MLA cited for you to e
 
 - [API Publication Search](https://api.molecularmatch.com/#publications)
 - [API Assertions Search](https://api.molecularmatch.com/#assertions)
-- [Publications.MolecularMatch.com](https://publications.molecularmatch.com)
-- [Assertions.MolecularMatch.com](https://assertions.molecularmatch.com)
 
 MolecularMatch indexes publications in several ways:
 
