@@ -40,7 +40,7 @@ The extrinsic score of publications is calculated at search time by matching you
 
 Publication Types influence the intrinsic score.
 
-The highest scoring publications will be those of clinical utility. That is if they correspond to clinical trials (higher phases scoring higher), interventional treatments, practice guidelines, case studies, consensuses, etc. And lower scoring publications that have to do with observational research only, animal models, cell-lines, etc.
+The highest scoring publications will be those of clinical utility such as those corresponding to clinical trials (higher phases scoring higher), interventional treatments, practice guidelines, case studies, consensuses, etc. Lower scoring publications will correspond with observational research only, animal models, cell-lines, etc.
 
 #### Test Suite Curation
 
