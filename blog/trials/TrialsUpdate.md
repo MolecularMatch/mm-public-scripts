@@ -93,26 +93,16 @@ We can easily develop datasets and analytics through our deep understanding of t
 
 One example would be a country by country breakdown of trial numbers.
 
-##### Germany, France lead Europe
-![Europe](images/europe.png)
-
-##### China, Japan, Korea lead Asia
+China, Japan, Korea lead Asia
 ![Asia](images/asia.png)
 
-##### Turkey, Iran, Egypt lead the Middle East / North Africa region
+Turkey, Iran, Egypt lead the Middle East / North Africa region
 ![Middle East](images/middleeast.png)
 
-##### South Africa, Uganda and Kenya lead
-![Africa](images/africa.png)
+Other Analysis
 
-##### Total Counts - *(for countries > 3 trials)*
-![Country Counts](images/countrycounts.png)
+![Country Counts](images/Fig2_Stats2018ggplot.png)
+![](images/Fig1_Stats2018.png)
+![](images/seoul_bold.png)
 
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<img src="images/footer.png" style="width: 900px;"/>
+<!-- <img src="images/footer.png" style="width: 900px;"/> -->
