@@ -13,7 +13,7 @@ Trials are continually updated, scored, and sorted for you to easily incorporate
 
 ---------
 
-#### Search Filtering
+### Search Filtering
 
 The most important factor affecting your search results is what filters are matched, and what is filtered out because of your inputs. Inputs span [everything from Age, Mutation to Geo-Location and more.](https://api.molecularmatch.com/#knowledgeDomains)
 
@@ -42,7 +42,7 @@ Trial Types influence the intrinsic score.
 
 The **highest scoring** trials will be those of clinical utility such as those corresponding to clinical trials (higher phases scoring higher), interventional treatments, practice guidelines, case studies, consensuses, etc. **Lower** scoring publications will correspond with observational research only, animal models, cell-lines, etc.
 
-#### Test Suite Curation
+### Test Suite Curation
 
 Tuning the algorithm is a frequent task as we learn new things about trials and get additional oversight from clients and internal curation teams.
 
@@ -87,13 +87,13 @@ MolecularMatch indexes trials based on a weekly acquisition of trials from a glo
 
 Many trials are listed on _more than one_ registry. We handle that by registry priority and secondary identification. For example, if a trial coming in from UMIN has a secondary identifier that is a NCT. No. from ClinicalTrials.gov, this trial will not make into the final trial table. Instead, a link between the two are created and it is skipped because we already have it from a better source.
 
-#### Trial Site Geo-Location Enhancements
+### Trial Site Geo-Location Enhancements
 
 One of our biggest value additions has been our geo-location and medical group enhancements. Through Google Maps integration, we continuously find the locations of trial sites around the world. We've added millions of addresses for sites that otherwise were not given on the registry. This allows features like [distance-based](https://api.molecularmatch.com/#domainDistance) and medical group searches; that way you can find trials for your patients near you, or at your institution. Only with MolecularMatch is this advanced level of geo-location available.
 
 Thousands of hospitals, universities, pharmaceutical / biotechnology companies, contract research organizations, government entities and clinics are represented in the system.
 
-#### Datasets: World Map of Trials
+### Datasets: World Map of Trials
 
 We can easily develop datasets and analytics through our deep understanding of trial data. This data can be used by a variety of industries like medical, financial, research and pharmaceutical groups.
 
