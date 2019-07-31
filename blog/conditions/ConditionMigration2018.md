@@ -67,7 +67,6 @@ Screenshot of internal MM tools for creating composite conditions.
 
 <img src="images/composites2.png" style="width: 420px;"/>
 
-
 ---------
 
 #### Lets Use It!

@@ -96,20 +96,35 @@ This is a global analysis of all clinical trials. Interesting results can come o
 Registry specific trials can be viewed on our public app or API (http://api.molecularmatch.com):
 
 http://app.molecularmatch.com/search/ANZCTR
+
 http://app.molecularmatch.com/search/CTGOV
+
 http://app.molecularmatch.com/search/DRKS
+
 http://app.molecularmatch.com/search/EUCTR
+
 http://app.molecularmatch.com/search/CTRI
+
 http://app.molecularmatch.com/search/UMIN
+
 http://app.molecularmatch.com/search/RPCEC
+
 http://app.molecularmatch.com/search/SLCTR
+
 http://app.molecularmatch.com/search/PACTR
+
 http://app.molecularmatch.com/search/REPEC
+
 http://app.molecularmatch.com/search/TCTR
+
 http://app.molecularmatch.com/search/CRIS
+
 http://app.molecularmatch.com/search/NTR
+
 http://app.molecularmatch.com/search/REBEC
+
 http://app.molecularmatch.com/search/ChiCTR
+
 http://app.molecularmatch.com/search/IRCT
 
 ---------
