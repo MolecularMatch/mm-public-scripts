@@ -19,11 +19,7 @@ The most important factor affecting your search results is what filters are matc
 
 Your inputs are matched to different parts of the trial like title, summary and inclusion criteria. When inputs match exclusion criteria, those trials are filtered out from the results.
 
-The ranking of the results depends on where in the trial your filters matched, as well as being based on our curation team's efforts to boost the most important factors of trials.
-
 ### Scoring System Explained
-
-Scoring is different than filtering.
 
 Trials are accessed through API endpoints or search portals. They are returned sorted based on a highly advanced scoring system. Through extensive testing with M.D. and Ph.D. oversight, we've developed a search engine that is most likely to have results relevant to your case.
 
@@ -34,19 +30,17 @@ Scores are made up of a combination of **intrinsic** and **extrinsic** values.
 1. Trial Types (scores adjust up or down).
 2. Phase (III > II > I)
 
-The **extrinsic** score is calculated at search time by matching your search criteria to information on the trial. For example, terms matched in the title are given preference to terms found in the summary automatically. However, the curation continuously overrides this logic by adjusting the priorities of terms based on their scientific understanding of the trial.
+The __extrinsic__ score is calculated at search time by matching your search criteria to information on the trial. For example, terms matched in the title are given preference to terms found in the summary automatically. However, the curation continuously overrides this logic by adjusting the priorities of terms based on their scientific understanding of the trial.
 
-#### Trial Types for score adjustments
+#### Trial Types for Score Adjustments
 
-Trial Types influence the intrinsic score.
-
-The **highest scoring** trials will be those of clinical utility such as those corresponding to clinical trials (higher phases scoring higher), interventional treatments, practice guidelines, case studies, consensuses, etc. **Lower** scoring publications will correspond with observational research only, animal models, cell-lines, etc.
+Trial Types influence the intrinsic score. The **highest scoring** trials will be those of clinical utility such as those corresponding to clinical trials (higher phases scoring higher), interventional treatments, practice guidelines, case studies, consensuses, etc. **Lower** scoring publications will correspond with observational research only, animal models, cell-lines, etc.
 
 ### Test Suite Curation
 
-Tuning the algorithm is a frequent task as we learn new things about trials and get additional oversight from clients and internal curation teams.
-
 Ranking has been validated through hundreds of test suites. Test suites represent patient cases (gene/variant + condition), and we use them to check and adjust the ranking of trials so that the most relevant come up first.
+
+Tuning the algorithm is a frequent task as we learn new things about trials and get additional oversight from clients and internal curation teams.
 
 Curation is also how we develop our [biomedical rules engine](https://api.molecularmatch.com/#biomedicalRules) for further tuning.
 
@@ -58,7 +52,7 @@ At MolecularMatch we bring in all trials and merge them into a consistent format
 
 #### Public Registries Incorporated into MM Database
 
-MolecularMatch indexes trials based on a weekly acquisition of trials from a global collection of registries.
+MolecularMatch indexes trials by weekly acquisition  from a global collection of registries.
 
 | Registry Code | Registry Name | Count |
 |---|---|---|
@@ -85,11 +79,11 @@ MolecularMatch indexes trials based on a weekly acquisition of trials from a glo
 
 #### Registry Merging
 
-Many trials are listed on _more than one_ registry. We handle that by registry priority and secondary identification. For example, if a trial coming in from UMIN has a secondary identifier that is a NCT. No. from ClinicalTrials.gov, this trial will not make into the final trial table. Instead, a link between the two are created and it is skipped because we already have it from a better source.
+Many trials are listed on _more than one_ registry. We handle that by registry priority and secondary identification. For example, if a trial coming in from UMIN has a secondary identifier that is a NCT. No. from ClinicalTrials.gov, the UMIN trial will not make into the final trial table. Instead, a link between the two are created because we already have it from a better source.
 
 ### Trial Site Geo-Location Enhancements
 
-One of our biggest value additions has been our geo-location and medical group enhancements. Through Google Maps integration, we continuously find the locations of trial sites around the world. We've added millions of addresses for sites that otherwise were not given on the registry. This allows features like [distance-based](https://api.molecularmatch.com/#domainDistance) and medical group searches; that way you can find trials for your patients near you, or at your institution. Only with MolecularMatch is this advanced level of geo-location available.
+One of our biggest value additions has been our geo-location and medical group enhancements. Through Google Maps integration, we continuously find the locations of trial sites around the world. We've added millions of addresses for sites that were otherwise not known. This allows features like [distance-based](https://api.molecularmatch.com/#domainDistance) and medical group searches; that way you can find trials near you or at a specific institution. Only with MolecularMatch is this advanced level of geo-location available.
 
 Thousands of hospitals, universities, pharmaceutical / biotechnology companies, contract research organizations, government entities and clinics are represented in the system.
 
@@ -97,14 +91,13 @@ Thousands of hospitals, universities, pharmaceutical / biotechnology companies, 
 
 We can easily develop datasets and analytics through our deep understanding of trial data. This data can be used by a variety of industries like medical, financial, research and pharmaceutical groups.
 
+One example would be a country by country breakdown of trial numbers.
+
 ##### Germany, France lead Europe
 ![Europe](images/europe.png)
 
 ##### China, Japan, Korea lead Asia
 ![Asia](images/asia.png)
-
-##### Brazil, Argentina lead South America
-![Latin America](images/latam.png)
 
 ##### Turkey, Iran, Egypt lead the Middle East / North Africa region
 ![Middle East](images/middleeast.png)
@@ -115,8 +108,11 @@ We can easily develop datasets and analytics through our deep understanding of t
 ##### Total Counts - *(for countries > 3 trials)*
 ![Country Counts](images/countrycounts.png)
 
----------
 
+
+<br>
+<br>
+<br>
 <br>
 <br>
 <img src="images/footer.png" style="width: 900px;"/>
