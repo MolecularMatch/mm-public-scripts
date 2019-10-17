@@ -7,22 +7,22 @@
 # $ ./file.sh apiKey
 # --data "mode=discovery" set for a regular drug search, not assertion evidence guided drug search (--data "mode=criteriaunmet" \
 
-curl 'https://api.molecularmatch.com/v2/search/drugs' \
+curl 'https://api.molecularmatch.com/v3/search/drugs' \
 --data "apiKey=$1" \
 --data "mode=discovery" \
 --data-urlencode 'filters=[{"facet" : "DRUGCLASS", "term" : "Chemotherapy"}, {"facet" : "CONDITION", "term" : "Osteosarcoma"}]'
 
-curl 'https://api.molecularmatch.com/v2/search/drugs' \
+curl 'https://api.molecularmatch.com/v3/search/drugs' \
 --data "apiKey=$1" \
 --data "mode=discovery" \
 --data-urlencode 'filters=[{"facet" : "DRUGCLASS", "term" : "Chemotherapy"}]'
 
-curl 'https://api.molecularmatch.com/v2/search/drugs' \
+curl 'https://api.molecularmatch.com/v3/search/drugs' \
 --data "apiKey=$1" \
 --data "mode=discovery" \
 --data-urlencode 'filters=[{"facet" : "DRUG", "term" : "Tarceva"}]'
 
-curl 'https://api.molecularmatch.com/v2/search/drugs' \
+curl 'https://api.molecularmatch.com/v3/search/drugs' \
 --data "apiKey=$1" \
 --data "mode=discovery" \
 --data-urlencode 'filters=[{"facet" : "DRUG", "term" : "Erlotinib"}]'

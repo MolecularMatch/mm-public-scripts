@@ -9,10 +9,10 @@
 # List our semi-static data
 # Note, this endpoint is not activated yet (as of 05/07/18)
 
-curl -X GET 'https://api.molecularmatch.com/v2/list/ecog' \
+curl -X GET 'https://api.molecularmatch.com/v3/list/ecog' \
 --data "apiKey=$1"
 
-curl -X GET 'https://api.molecularmatch.com/v2/list/trialstatus' \
+curl -X GET 'https://api.molecularmatch.com/v3/list/trialstatus' \
 --data "apiKey=$1"
 
 # endpoints
