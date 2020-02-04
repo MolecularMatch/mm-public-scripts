@@ -1,10 +1,12 @@
 <img src="images/letterhead.png" style="width: 900px;"/>
 
-## MolecularMatch Publications 2019 Update
+## MolecularMatch Publications 2020 Update
 
-Publication search has expanded in importance in recent years at MM due to our in-house curation requirements and necessity to assert all recommendations with [literature evidence](https://api.molecularmatch.com/#aboutCompliance). With our search engine expertise, we have created the most clinically relevant and user friendly publication search in the industry. Our goal is that the most relevant results show up in the top 10 for any clinical oncology search.
+Publication search has expanded in importance at MM due to our in-house curation requirements and necessity to assert all recommendations with [literature evidence](https://api.molecularmatch.com/#aboutCompliance). With our search engine expertise, we have created the most clinically relevant and user friendly publication search in the industry. Our goal is that the most relevant results show up in the top 10 for any clinical oncology search.
 
-Publications are continually updated, scored, sorted, and MLA cited for you to easily incorporate into your products.
+To speed up the efficiency of our in-house curation, we have developed an internal AI-Assistant using state of the art techniques in machine learning natural language processing. These same models are also running on our publication search engine to boost up the most relevant results for you.
+
+Our publications (1.2 Million and counting) are continually updated, scored, sorted, and MLA cited for you to easily incorporate into your products.
 
 - [API Publication Search](https://api.molecularmatch.com/#publications)
 - [API Assertions Search](https://api.molecularmatch.com/#assertions)
@@ -33,8 +35,9 @@ Intrinsic scores are related to attributes of the publication, such as:
 4. Number (and quality) of evidence items in CIViCdb.org referencing this publication
 5. Publication Types (scores adjust up or down)
 6. Trial Types (scores adjust up or down)
+7. Machine Learning Score Boost from the AI curation assistant
 
-The extrinsic score of publications is calculated at search time by matching your search criteria to information on the abstract. For example, terms matched in the title are given preference to terms found lower in the abstract, like in the methods section.
+The extrinsic score of publications is calculated **at search time** by matching your search criteria to information on the abstract. For example, terms matched in the title are given preference to terms found lower in the abstract, like in the methods section.
 
 #### Publication Types and Trial Types for score adjustments
 
@@ -50,9 +53,6 @@ If users find any publications we are missing from our index, they can submit th
 
 ---------
 
-<br>
-<br>
-<br>
 <br>
 <br>
 <img src="images/footer.png" style="width: 900px;"/>

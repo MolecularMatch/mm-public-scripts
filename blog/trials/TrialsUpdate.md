@@ -92,4 +92,9 @@ Do you manage an institution's trials? Would you like to upload your private tri
 
 Institution specific private trials can be uploaded and coalesced into the search results. Private trials are only visible to the owning institution or institutions affiliated with the institution's Integrated Delivery Network (IDN). See more on our [API Page for Institutional Upload](https://api.molecularmatch.com/#privatetrial).
 
-<!-- <img src="images/footer.png" style="width: 900px;"/> -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<img src="images/footer.png" style="width: 900px;"/>
