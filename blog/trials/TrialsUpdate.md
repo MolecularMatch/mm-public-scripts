@@ -95,6 +95,4 @@ Institution specific private trials can be uploaded and coalesced into the searc
 <br>
 <br>
 <br>
-<br>
-<br>
 <img src="images/footer.png" style="width: 900px;"/>
