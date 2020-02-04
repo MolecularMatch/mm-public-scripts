@@ -32,10 +32,6 @@ Scores are made up of a combination of **intrinsic** and **extrinsic** values.
 
 The __extrinsic__ score is calculated at search time by matching your search criteria to information on the trial. For example, terms matched in the title are given preference to terms found in the summary automatically. However, the curation continuously overrides this logic by adjusting the priorities of terms based on their scientific understanding of the trial.
 
-#### Trial Types for Score Adjustments
-
-Trial Types influence the intrinsic score. The **highest scoring** trials will be those of clinical utility such as those corresponding to clinical trials (higher phases scoring higher), interventional treatments, practice guidelines, case studies, consensuses, etc. **Lower** scoring publications will correspond with observational research only, animal models, cell-lines, etc.
-
 ### Test Suite Curation
 
 Ranking has been validated through hundreds of test suites. Test suites represent patient cases (gene/variant + condition), and we use them to check and adjust the ranking of trials so that the most relevant come up first.
@@ -92,6 +88,8 @@ Do you manage an institution's trials? Would you like to upload your private tri
 
 Institution specific private trials can be uploaded and coalesced into the search results. Private trials are only visible to the owning institution or institutions affiliated with the institution's Integrated Delivery Network (IDN). See more on our [API Page for Institutional Upload](https://api.molecularmatch.com/#privatetrial).
 
+<br>
+<br>
 <br>
 <br>
 <br>
