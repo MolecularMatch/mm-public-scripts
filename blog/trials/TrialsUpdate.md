@@ -27,10 +27,12 @@ Scores are made up of a combination of **intrinsic** and **extrinsic** values.
 
 **Intrinsic** scores are related to attributes of the trial, such as:
 
-1. Trial Types (scores adjust up or down).
+1. Trial Types (scores adjust up or down; Interventional > Observational).
 2. Phase (III > II > I)
 
-The __extrinsic__ score is calculated at search time by matching your search criteria to information on the trial. For example, terms matched in the title are given preference to terms found in the summary automatically. However, the curation continuously overrides this logic by adjusting the priorities of terms based on their scientific understanding of the trial.
+The __extrinsic__ score is calculated **at search time** by matching your search criteria to information on the trial. For example, terms matched in the title are given preference to terms found in the summary automatically. However, the curation continuously overrides this logic by adjusting the priorities of terms based on their scientific understanding of the trial.
+
+Scoring is always a balance between inherent quality of results vs. relevance to the user's search. Dozens of factors including meta-data on the documents, and machine learning models influence the ultimate score.
 
 ### Test Suite Curation
 
