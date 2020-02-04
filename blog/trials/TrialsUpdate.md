@@ -1,6 +1,6 @@
 <img src="images/letterhead.png" style="width: 900px;"/>
 
-## MolecularMatch Trial Search Update (July, 2019)
+## MolecularMatch Trial Search Update (February, 2020)
 
 MolecularMatch was founded on idea of making clinical trial search better. Better for doctors, better for patients, better for health technology integrators. The scoring algorithm we developed, [patented](https://patents.google.com/patent/US20160117470A1/), and continually improve, is how we deliver this value.
 
@@ -52,30 +52,29 @@ At MolecularMatch we bring in all trials and merge them into a consistent format
 
 #### Public Registries Incorporated into MM Database
 
-MolecularMatch indexes trials by weekly acquisition  from a global collection of registries.
+MolecularMatch indexes trials by weekly acquisition from a global collection of registries.
 
 | Registry Code | Registry Name | Count |
 |---|---|---|
-| CTGOV | ClinicalTrials.gov | **252,112** |
-| UMIN | University Hospital Medical Information Network (Japan) | **5,179** |
-| ANZCTR | Australia/New Zealand Clinical Trials Registry | **4,979** |
-| ChiCTR | Chinese Clinical Trials Registry | **4,031** |
-| DRKS | German Clinical Trials Registry | **3,165** |
-| IRCT | Iranian Registry of Clinical Trials | **2,953** |
-| EUCTR | European Clinical Trials Registry | **1,965** |
-| ISRCTN | International Standard Registry of Clinical Trials | **1,855** |
-| CTRI | Indian Clinical Trials Registry | **1,456** |
-| NTR | Netherlands Trial Registry | **773** |
-| CRIS | Clinical Research Information Service (Korea) | **476** |
-| TCTR | Thai Clinical Trials Registry | **422** |
-| REBEC | Brazilian Clinical Trials Registry | **374** |
-| PACTR | Pan African Clinical Trials Registry | **174** |
-| JapicCTI | Japan Pharmaceutical Information Center - Clinical Trials Information  | **115** |
-| REPEC | Peruvian Clinical Trial Registry | **70** |
-| JMACCT | Japan Medical Association - Center for Clinical Trials | **49** |
-| SLCTR | Sri Lanka Clinical Trials Registry | **31** |
-| RPCEC | Cuban Public Registry of Clinical Trials | **8** |
-*counts from: 04/10/2018*
+| CTGOV | ClinicalTrials.gov | **315,480** |
+| JPRN | Japan Primary Registries Network (UMIN + JapicCTI + JMACCT) | **23,568** |
+| ChiCTR | Chinese Clinical Trials Registry | **21,362** |
+| CTRI | Indian Clinical Trials Registry | **15,658** |
+| IRCT | Iranian Registry of Clinical Trials | **14,879** |
+| ANZCTR | Australia/New Zealand Clinical Trials Registry | **8,013** |
+| DRKS | German Clinical Trials Registry | **5,846** |
+| ISRCTN | International Standard Registry of Clinical Trials | **5,290** |
+| NTR | Netherlands Trial Registry | **3,370** |
+| TCTR | Thai Clinical Trials Registry | **3,031** |
+| EUCTR | European Clinical Trials Registry | **2,961** |
+| CRIS | Clinical Research Information Service (Korea) | **2,807** |
+| REBEC | Brazilian Clinical Trials Registry | **2,227** |
+| PACTR | Pan African Clinical Trials Registry | **1,571** |
+| SLCTR | Sri Lanka Clinical Trials Registry | **178** |
+| REPEC | Peruvian Clinical Trial Registry | **125** |
+| RPCEC | Cuban Public Registry of Clinical Trials | **109** |
+| LBCTR | Lebanon Clinical Trials Registry | **15** |
+*counts from: 02/04/2020*
 
 #### Registry Merging
 
@@ -87,22 +86,10 @@ One of our biggest value additions has been our geo-location and medical group e
 
 Thousands of hospitals, universities, pharmaceutical / biotechnology companies, contract research organizations, government entities and clinics are represented in the system.
 
-### Datasets: World Map of Trials
+### Private Trial Upload
 
-We can easily develop datasets and analytics through our deep understanding of trial data. This data can be used by a variety of industries like medical, financial, research and pharmaceutical groups.
+Do you manage an institution's trials? Would you like to upload your private trials to MolecularMatch so they are available through our services, but only to you?
 
-One example would be a country by country breakdown of trial numbers.
-
-China, Japan, Korea lead Asia
-![Asia](images/asia.png)
-
-Turkey, Iran, Egypt lead the Middle East / North Africa region
-![Middle East](images/middleeast.png)
-
-Other Analysis
-
-![Country Counts](images/Fig2_Stats2018ggplot.png)
-![](images/Fig1_Stats2018.png)
-![](images/seoul_bold.png)
+Institution specific private trials can be uploaded and coalesced into the search results. Private trials are only visible to the owning institution or institutions affiliated with the institution's Integrated Delivery Network (IDN). See more on our [API Page for Institutional Upload](https://api.molecularmatch.com/#privatetrial).
 
 <!-- <img src="images/footer.png" style="width: 900px;"/> -->
