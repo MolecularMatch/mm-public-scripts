@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	url := "https://api.molecularmatch.com/v2/search/trials"
+	url := "https://api.molecularmatch.com/v4/trial/search"
   var jsonStr = []byte(`
     {"filters":[
       {"facet":"CONDITION","term":"Lung cancer"},

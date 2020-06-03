@@ -15,7 +15,7 @@ if apiKey == '<your api key>' and sys.argv[1]:
 	apiKey = sys.argv[1]
 
 # search drugs by condition
-url = mmService + "/v2/search/drugs"
+url = mmService + "/v4/drug/search"
 filters = [{'facet':'CONDITION','term':'Lung cancer'}]
 payload = {
 	'mode': 'discovery',
@@ -27,7 +27,7 @@ print(r.json())
 
 # search drugs by the drug name
 
-url = mmService + "/v2/search/drugs"
+url = mmService + "/v4/drug/search"
 filters = [{'facet':'DRUG','term':'nivolumab'}]
 payload = {
 	'mode': 'discovery',
@@ -40,7 +40,7 @@ r = requests.post(url, data=payload)
 # search drugs by the drug class
 # find chemotherapy drugs
 
-url = mmService + "/v2/search/drugs"
+url = mmService + "/v4/drug/search"
 filters = [
 	{'facet':'DRUGCLASS','term':'Chemotherapy'}
 ]

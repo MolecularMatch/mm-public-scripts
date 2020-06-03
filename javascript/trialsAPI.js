@@ -45,7 +45,7 @@ async.whilst(
     // can put ratelimiting timeout in here
     console.log('page ' + page + ' of ' + totalPages)
     requestretry({
-      url: apiConnectionString + '/v2/trial/search',
+      url: apiConnectionString + '/v4/trial/search',
       maxAttempts: 2,
       retryDelay: 50,
       method: 'POST',

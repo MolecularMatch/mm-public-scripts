@@ -8,14 +8,14 @@ import numpy as np
 import sys
 
 resourceURLs = {
-	"trialSearch": "/v2/search/trials",
-	"drugSearch": "/v2/search/drugs",
-	"publicationSearch": "/v2/search/publications",
-	"mutationGet": "/v2/mutation/get",
-	"geneGet": "/v2/gene/get",
-	"mutationClassify": "/v2/mutation/classify",
-	"validateTerms": "/v2/validate/terms",
-	"assertionSearch": "/v2/search/assertions",
+	"trialSearch": "/v4/trial/search",
+	"drugSearch": "/v4/drug/search",
+	"publicationSearch": "/v4/publication/search",
+	"mutationGet": "/v4/mutation/get",
+	"geneGet": "/v4/gene/get",
+	"mutationClassify": "/v4/mutation/classify",
+	"validateTerms": "/v4/validate/terms",
+	"assertionSearch": "/v4/assertion/search",
 	"assertionExport": "/v2/export/assertions"
 }
 mmService = "https://api.molecularmatch.com"

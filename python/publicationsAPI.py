@@ -21,7 +21,7 @@ page = 1
 limit = 10
 start = 0
 
-url = mmService + "/v2/search/publications"
+url = mmService + "/v4/publication/search"
 filters = [
 	{'facet':'CONDITION','term':'Glioblastoma'},
 	# {'facet':'MUTATION','term':'IDH1 c.394C>T'},
