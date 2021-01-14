@@ -1,3 +1,5 @@
+# DEPRECATION NOTE. prevalence is no longer a supported endpoint.
+
 #################
 # Variant Prevalence
 #################

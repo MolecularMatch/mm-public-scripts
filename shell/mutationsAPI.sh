@@ -1,3 +1,5 @@
+# DEPRECATION NOTE. mutation/get is no longer a supported endpoint.
+
 #################
 # Mutations
 #################
